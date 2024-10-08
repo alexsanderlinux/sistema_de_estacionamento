@@ -12,3 +12,4 @@
 /home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.pdb
 /home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.genruntimeconfig.cache
 /home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/ref/SistemaParaEstacionamento.dll
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.sourcelink.json

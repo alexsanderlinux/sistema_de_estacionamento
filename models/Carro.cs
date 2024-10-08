@@ -12,7 +12,8 @@ namespace SistemaParaEstacionamento.models
         public string Cor {get; set; }
         public string Placa { get; set; }
         public string Modelo { get; set; }
-        public string Tipo { get; set; }     
+        public string Tipo { get; set; }  
+        public string Vaga { get; set; }   
     }
 }
 

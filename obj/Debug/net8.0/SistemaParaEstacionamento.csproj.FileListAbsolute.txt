@@ -1,0 +1,14 @@
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/bin/Debug/net8.0/SistemaParaEstacionamento
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/bin/Debug/net8.0/SistemaParaEstacionamento.deps.json
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/bin/Debug/net8.0/SistemaParaEstacionamento.runtimeconfig.json
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/bin/Debug/net8.0/SistemaParaEstacionamento.dll
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/bin/Debug/net8.0/SistemaParaEstacionamento.pdb
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.AssemblyInfoInputs.cache
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.AssemblyInfo.cs
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.csproj.CoreCompileInputs.cache
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.dll
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/refint/SistemaParaEstacionamento.dll
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.pdb
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/SistemaParaEstacionamento.genruntimeconfig.cache
+/home/alexsanderlinux/Documentos/curso_dio/csharp/SistemaParaEstacionamento/obj/Debug/net8.0/ref/SistemaParaEstacionamento.dll

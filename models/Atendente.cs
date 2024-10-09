@@ -8,7 +8,6 @@ namespace SistemaParaEstacionamento.models
     public class Atendente
     {
         public string Nome { get; set; }
-        public int Idade { get; set; }
         public int CargaHoraria { get; set; }
     }
 }

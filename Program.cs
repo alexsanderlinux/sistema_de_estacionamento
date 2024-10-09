@@ -1,74 +1,65 @@
 ﻿using SistemaParaEstacionamento.models;
 
-//Carro c = new Carro(); 
+ 
 
 string opcao;
+string opcao1;
 bool exibirMenu = true;
 bool menuInicial = true;
-bool cadastroCarro = false;
-bool menuOperacao = false;
-List<string> listaCarros = new List<string>();
+//bool cadastroCarro = false;
+//bool menuOperacao = false;
+AdministracaoOperacional adm = new AdministracaoOperacional();
+
 
 
 while(exibirMenu)
-{       
+{       /*
     if(menuInicial)
     {
         Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
-        Console.WriteLine("Menu de configuração inicial do estacionamento...");
-        Console.WriteLine("1 - Cadastrar atendente");
-        Console.WriteLine("2 - Cadastrar preço da entrada...");
-        Console.WriteLine("3 - Cadastrar preço por hora...");
-        Console.WriteLine("4 - Cadastrar carga horaria atendente");
-        Console.WriteLine("5 - encerrar sistema");
-        //Console.WriteLine("6 - pular menu");
-    }
-
-    if(menuOperacao)
-    {
-        Console.WriteLine("Menu de operação do sistema:");
-        Console.WriteLine("1 - Cadastrar veiculo:");
-        Console.WriteLine("2 - Retirada de Veiculo:");
-        Console.WriteLine("3 - Listar veiculos no estacionamento:");
-        Console.WriteLine("4 - Voltar ao menu de configuração: ");
-        Console.WriteLine("5 - Encerrar expediente... ");
-
-    }
-
-    if(cadastroCarro)
-    {
+        Console.WriteLine("Menu de configuração inicial sistema de estacionamento...");
+      /*  
+        opcao1 = Console.ReadLine();
         
-        Carro c = new Carro();
-        Console.WriteLine("Insira na sequencia os dados de cadastro do veiculo:");
+        switch(opcao1)
+        {
+            
+            case "1":
+                Atendente atendente = new Atendente();
+
+                Console.WriteLine("1 - Cadastrar atendente");
+                atendente.Nome = Console.ReadLine();       
+                Console.WriteLine("2 - Cadastrar carga horaria atendente");
+                string carga = Console.ReadLine(); 
+                int cargaConvertida = Convert.ToInt32(carga);
+                atendente.CargaHoraria = cargaConvertida;
+                
+            break;
+
+            case "2":
+             Console.WriteLine("2 - Cadastrar preço da entrada...");
+            
+            
+            Console.WriteLine("3 - Cadastrar preço por hora...");
+            break;
+
+
+        }
         
-        Console.WriteLine("1 - Inserir nome do dono:");
-        c.Dono = Console.ReadLine();
-        Console.WriteLine("2 - Inserir a marca:");
-        c.Marca = Console.ReadLine();
-        Console.WriteLine("3 - Inserir a cor:");
-        c.Cor = Console.ReadLine();
-        Console.WriteLine("4 - Inserir a placa: ");
-        c.Placa = Console.ReadLine();
-        Console.WriteLine("4 - Inserir o modelo: ");
-        c.Modelo = Console.ReadLine();        
-        Console.WriteLine("5 - Inserir o tipo: ");
-        c.Tipo = Console.ReadLine();
-        Console.WriteLine("6 - Inserir o vaga: ");
-        c.Vaga = Console.ReadLine();
+        
+        
+        
+        
+        
+    }*/
 
-      
-        listaCarros.Add($"{c.Dono},{c.Marca},{c.Cor},{c.Placa},{c.Modelo},{c.Tipo},{c.Vaga}");
+            Console.WriteLine("1 - Cadastrar veiculo:");
+            Console.WriteLine("2 - Retirada de Veiculo:");
+            Console.WriteLine("3 - Listar veiculos no estacionamento:");
+            Console.WriteLine("4 - Voltar ao menu de configuração: ");
+            Console.WriteLine("5 - Encerrar expediente... ");
 
-        for (int i = 0; i < listaCarros.Count; i++)
-{
-        Console.WriteLine($"posicao:{i} e item: {listaCarros[i]}");
-
-        Console.WriteLine("5 - Inserir o tipo: ");
-        opcao = Console.ReadLine();
-}
-
-    }
-
+ 
 
     opcao = Console.ReadLine();
 
@@ -76,18 +67,33 @@ while(exibirMenu)
     {
         case "1":
             Console.Clear();
-            Console.WriteLine("Entrada de veiculo");
-            Console.WriteLine("Gentileza informar os dados: ");
+
+            adm.CadastrarNovoVeiculo();
+
+            /*Console.WriteLine("Menu de operação do sistema:");
+            Console.WriteLine("1 - Cadastrar veiculo:");
+            Console.WriteLine("2 - Retirada de Veiculo:");
+            Console.WriteLine("3 - Listar veiculos no estacionamento:");
+            Console.WriteLine("4 - Voltar ao menu de configuração: ");
+            Console.WriteLine("5 - Encerrar expediente... ");*/
             menuInicial = false;
-            cadastroCarro = true;
+               
             break;
 
         case "2":
-            Console.WriteLine("Busca de cliente");
-            break;
+                adm.ListarVeiculos();
+                menuInicial = false;
+                
+                
+                
+                
+                break;
 
         case "3":
-            Console.WriteLine("apagar de cliente");
+                Console.WriteLine("Busca de cliente");
+
+                
+                
             break;
         
         case "4":

@@ -34,7 +34,7 @@ namespace SistemaParaEstacionamento.models
         {
             for (int i = 0; i < listaCarros.Count; i++)
             {
-                Console.WriteLine($"posicao:{i} e item: {listaCarros[i]}");
+                Console.WriteLine($"vaga:{novoCarro.Vaga} e item: {listaCarros[i]}");
             }
         }
 

@@ -3,106 +3,63 @@
  
 
 string opcao;
-string opcao1;
 bool exibirMenu = true;
-bool menuInicial = true;
-//bool cadastroCarro = false;
-//bool menuOperacao = false;
-AdministracaoOperacional adm = new AdministracaoOperacional();
+bool menuConfiguracao = true;
+bool menuOperacao = false;
+AdministracaoOperacional admOperacional = new AdministracaoOperacional();
+Atendente novoAtendente = new Atendente(); 
 
 
 
 while(exibirMenu)
-{       /*
-    if(menuInicial)
+{       
+    if(menuConfiguracao)
     {
         Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
-        Console.WriteLine("Menu de configuração inicial sistema de estacionamento...");
-      /*  
-        opcao1 = Console.ReadLine();
-        
-        switch(opcao1)
-        {
-            
-            case "1":
-                Atendente atendente = new Atendente();
+        Console.WriteLine("------------------------------------------------------------");
+        Console.WriteLine("| Menu de configuração inicial do sistema de estacionamento.|");
+        Console.WriteLine("------------------------------------------------------------");
+        Console.WriteLine("Digite 0 para realizar a primeira configuração do sistema.");
+    }
 
-                Console.WriteLine("1 - Cadastrar atendente");
-                atendente.Nome = Console.ReadLine();       
-                Console.WriteLine("2 - Cadastrar carga horaria atendente");
-                string carga = Console.ReadLine(); 
-                int cargaConvertida = Convert.ToInt32(carga);
-                atendente.CargaHoraria = cargaConvertida;
-                
-            break;
-
-            case "2":
-             Console.WriteLine("2 - Cadastrar preço da entrada...");
-            
-            
-            Console.WriteLine("3 - Cadastrar preço por hora...");
-            break;
-
-
-        }
-        
-        
-        
-        
-        
-        
-    }*/
-
-            Console.WriteLine("1 - Cadastrar veiculo:");
-            Console.WriteLine("2 - Retirada de Veiculo:");
-            Console.WriteLine("3 - Listar veiculos no estacionamento:");
-            Console.WriteLine("4 - Voltar ao menu de configuração: ");
-            Console.WriteLine("5 - Encerrar expediente... ");
-
- 
+    if(menuOperacao)
+    {
+        Console.WriteLine("Menu Operacional:");
+        Console.WriteLine("1 - Cadastrar veiculo:");
+        Console.WriteLine("2 - Listar veiculos no estacionamento:");
+        Console.WriteLine("3 - Retirada de veiculo");
+        Console.WriteLine("4 - Encerrar expediente... ");        
+    }
 
     opcao = Console.ReadLine();
 
     switch(opcao)
     {
+        case "0":
+            Console.Clear();
+            novoAtendente.CadastrarAtendente();
+
+            break;
+
         case "1":
             Console.Clear();
-
-            adm.CadastrarNovoVeiculo();
-
-            /*Console.WriteLine("Menu de operação do sistema:");
-            Console.WriteLine("1 - Cadastrar veiculo:");
-            Console.WriteLine("2 - Retirada de Veiculo:");
-            Console.WriteLine("3 - Listar veiculos no estacionamento:");
-            Console.WriteLine("4 - Voltar ao menu de configuração: ");
-            Console.WriteLine("5 - Encerrar expediente... ");*/
-            menuInicial = false;
-               
+            admOperacional.CadastrarNovoVeiculo();
+            menuConfiguracao = false;
             break;
 
         case "2":
-                adm.ListarVeiculos();
-                menuInicial = false;
-                
-                
-                
-                
-                break;
+            admOperacional.ListarVeiculos();
+            menuConfiguracao = false;
+            break;
 
         case "3":
-                Console.WriteLine("Busca de cliente");
+            Console.WriteLine("Busca de cliente");
 
                 
                 
             break;
         
         case "4":
-            
-           Console.WriteLine("cadastrar carga horaria atendente");
-            break;
-
-        case "5":
-            
             Console.Clear();
             exibirMenu = false;
             Console.WriteLine("Encerrar programa");
@@ -116,4 +73,3 @@ while(exibirMenu)
 
 }
 
-//Console.WriteLine("codigo abaixo do enviroment");

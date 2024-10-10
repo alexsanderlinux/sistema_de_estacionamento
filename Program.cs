@@ -7,7 +7,9 @@ bool exibirMenu = true;
 bool menuConfiguracao = true;
 bool menuOperacao = false;
 AdministracaoOperacional admOperacional = new AdministracaoOperacional();
-Atendente novoAtendente = new Atendente(); 
+Atendente novoAtendente = new Atendente();
+AdministracaoFinanceira admFinanceiro = new AdministracaoFinanceira();
+ 
 
 
 
@@ -38,7 +40,10 @@ while(exibirMenu)
         case "0":
             Console.Clear();
             novoAtendente.CadastrarAtendente();
-
+            admFinanceiro.ResgatarValorPorHora();
+            menuConfiguracao = false;
+            Console.Clear();
+            menuOperacao = true;
             break;
 
         case "1":
@@ -53,10 +58,8 @@ while(exibirMenu)
             break;
 
         case "3":
-            Console.WriteLine("Busca de cliente");
-
-                
-                
+            admOperacional.RetiradaDeVeiculo();                
+            menuConfiguracao = false;    
             break;
         
         case "4":

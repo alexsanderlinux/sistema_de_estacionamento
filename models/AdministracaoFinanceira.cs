@@ -12,6 +12,22 @@ namespace SistemaParaEstacionamento.models
         public int ValorPorHora { get; set; }
         public int Permanencia { get; set; }
 
+        public void ResgatarValorPorHora()
+        {
+            Console.WriteLine("Gentileza informar o valor da hora cobrada:");
+            string valPorHora  = Console.ReadLine();
+            int convValPorHora = Convert.ToInt32(valPorHora);
+            if(convValPorHora != 0)
+            {
+                ValorPorHora = convValPorHora;
+            }
+            else
+            {
+                Console.WriteLine("Valor incorreto!");
+            }
+            
+        }
+
         public void CalcularValorTotal(){
 
             Console.WriteLine("Gentileza informar a permanencia do veiculo:");

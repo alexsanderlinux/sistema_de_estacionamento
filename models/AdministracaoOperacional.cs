@@ -34,13 +34,29 @@ namespace SistemaParaEstacionamento.models
         {
             for (int i = 0; i < listaCarros.Count; i++)
             {
-                Console.WriteLine($"vaga:{novoCarro.Vaga} e item: {listaCarros[i]}");
+                Console.WriteLine($"Dados do carro: {listaCarros[i]}");
+                Console.WriteLine(listaCarros.Find);
             }
         }
 
         public void RetiradaDeVeiculo()
         {
             admFinanceira.CalcularValorTotal();
+
+            Console.WriteLine("Digite o codigo de referencia do veiculo...");
+            string recVaga = Console.ReadLine();
+            int convRecuperaVaga = Convert.ToInt32(recVaga);
+            string vaga = novoCarro.Vaga;
+            int convVaga = Convert.ToInt32(vaga);
+
+            
+                if(convVaga == convRecuperaVaga)
+                {
+                    listaCarros.Remove($"{novoCarro.Dono},{novoCarro.Marca},{novoCarro.Cor},{novoCarro.Placa},{novoCarro.Modelo},{novoCarro.Tipo},{novoCarro.Vaga}");
+                }
+            
+            
+            
         }
     }
 }

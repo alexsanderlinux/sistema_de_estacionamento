@@ -21,11 +21,11 @@ namespace SistemaParaEstacionamento.models
             novoCarro.Cor = Console.ReadLine();
             Console.WriteLine("4 - Inserir a placa: ");
             novoCarro.Placa = Console.ReadLine();
-            Console.WriteLine("4 - Inserir o modelo: ");
+            Console.WriteLine("5 - Inserir o modelo: ");
             novoCarro.Modelo = Console.ReadLine();        
-            Console.WriteLine("5 - Inserir o tipo: ");
+            Console.WriteLine("6 - Inserir o tipo: ");
             novoCarro.Tipo = Console.ReadLine();
-            Console.WriteLine("6 - Inserir o vaga: ");
+            Console.WriteLine("7 - Inserir o vaga: ");
             novoCarro.Vaga = Console.ReadLine();
             listaCarros.Add($"{novoCarro.Dono},{novoCarro.Marca},{novoCarro.Cor},{novoCarro.Placa},{novoCarro.Modelo},{novoCarro.Tipo},{novoCarro.Vaga}");
         }
@@ -35,7 +35,7 @@ namespace SistemaParaEstacionamento.models
             for (int i = 0; i < listaCarros.Count; i++)
             {
                 Console.WriteLine($"Dados do carro: {listaCarros[i]}");
-                Console.WriteLine(listaCarros.Find);
+                //Console.WriteLine(listaCarros.Find);
             }
         }
 
@@ -49,10 +49,13 @@ namespace SistemaParaEstacionamento.models
             string vaga = novoCarro.Vaga;
             int convVaga = Convert.ToInt32(vaga);
 
-            
-                if(convVaga == convRecuperaVaga)
+                for (int i = 0; i < listaCarros.Count; i++)
                 {
-                    listaCarros.Remove($"{novoCarro.Dono},{novoCarro.Marca},{novoCarro.Cor},{novoCarro.Placa},{novoCarro.Modelo},{novoCarro.Tipo},{novoCarro.Vaga}");
+            
+                    if(i == convRecuperaVaga)
+                    {
+                        listaCarros.RemoveAt(convRecuperaVaga);
+                    }
                 }
             
             

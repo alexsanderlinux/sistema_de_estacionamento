@@ -40,7 +40,7 @@ while(exibirMenu)
         case "0":
             Console.Clear();
             novoAtendente.CadastrarAtendente();
-            admFinanceiro.ResgatarValorPorHora();
+            admFinanceiro.ResgatarValores();
             menuConfiguracao = false;
             Console.Clear();
             menuOperacao = true;
@@ -58,8 +58,9 @@ while(exibirMenu)
             break;
 
         case "3":
-            admOperacional.RetiradaDeVeiculo();                
-            menuConfiguracao = false;    
+            admFinanceiro.CalcularValorTotal();
+            admOperacional.RetiradaDeVeiculo();
+            menuConfiguracao = false;
             break;
         
         case "4":

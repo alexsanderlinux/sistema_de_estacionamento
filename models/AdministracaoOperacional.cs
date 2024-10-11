@@ -10,7 +10,7 @@ namespace SistemaParaEstacionamento.models
     {
         List<string> listaCarros = new List<string>();
         Carro novoCarro = new Carro();
-        AdministracaoFinanceira admFinanceira = new AdministracaoFinanceira(); 
+        
         public void CadastrarNovoVeiculo()
         {
             Console.WriteLine("1 - Inserir nome do dono:");
@@ -35,23 +35,22 @@ namespace SistemaParaEstacionamento.models
             for (int i = 0; i < listaCarros.Count; i++)
             {
                 Console.WriteLine($"Dados do carro: {listaCarros[i]}");
-                //Console.WriteLine(listaCarros.Find);
+                
             }
         }
 
         public void RetiradaDeVeiculo()
         {
-            admFinanceira.CalcularValorTotal();
+            
 
             Console.WriteLine("Digite o codigo de referencia do veiculo...");
             string recVaga = Console.ReadLine();
             int convRecuperaVaga = Convert.ToInt32(recVaga);
-            string vaga = novoCarro.Vaga;
-            int convVaga = Convert.ToInt32(vaga);
+            
+
 
                 for (int i = 0; i < listaCarros.Count; i++)
                 {
-            
                     if(i == convRecuperaVaga)
                     {
                         listaCarros.RemoveAt(convRecuperaVaga);
